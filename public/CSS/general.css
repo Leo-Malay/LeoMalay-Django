@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.form {
+    width: 300px;
+    padding: 10px 15px;
+    margin: 20px auto;
+    border: 1px solid #d0d0d0;
+    text-align: center;
+}
+.button,
+.input {
+    width: 200px;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 5px;
+    font-size: 15px;
+}
+.input {
+    background-color: #f3f3f3;
+}
+/* Section Scheme */
+.content#content {
+    padding: 10px 20px;
+}
+.Header {
+    margin: auto 0px;
+    padding-bottom: 15px;
+}
+.Footer {
+    margin: auto 0px;
+    padding-top: 15px;
+}
+header,
+footer {
+    padding: 20px 0px;
+    width: 100%;
+    content: "";
+    clear: both;
+    display: table;
+    overflow: auto;
+    color: #eefbfb;
+    background-color: #12232e;
+    cursor: pointer;
+}
+header {
+    margin-bottom: 20px;
+}
+footer {
+    margin-top: 20px;
+}
+.header-drop-btn {
+    background-color: #4caf50;
+    padding: 8px 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.header-drop-down {
+    position: relative;
+    display: inline-block;
+}
+.header-drop-down-content {
+    display: none;
+    right: 0;
+    position: absolute;
+    background-color: #f8f8f8;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.header-drop-down-content a {
+    padding: 10px 30px;
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+.header-drop-down-content a:hover {
+    background-color: #eeecec;
+}
+.header-drop-down:hover .header-drop-down-content {
+    display: block;
+}
+.header-drop-down:hover .dropbtn {
+    background-color: #3e8e41;
+}
+.left {
+    float: left;
+    padding-left: 10px;
+}
+.right {
+    float: right;
+    padding-right: 10px;
+}
+/* Text scheme */
+#supHeader {
+    font-size: 35px;
+}
+#header {
+    font-size: 30px;
+}
+#subHeader {
+    font-size: 25px;
+}
+#supDesc {
+    font-size: 20px;
+}
+#desc {
+    font-size: 15px;
+}
+#subDesc {
+    font-size: 10px;
+}
+/* Color Scheme */
+.primary {
+    background-color: dodgerblue;
+}
+.true {
+    background-color: mediumseagreen;
+}
+.false {
+    background-color: tomato;
+}
+.primary,
+.false,
+.true {
+    color: #fff;
+}
+
+.primary-inv {
+    border-color: dodgerblue;
+    color: dodgerblue;
+}
+.true-inv {
+    border-color: mediumseagreen;
+    color: mediumseagreen;
+}
+.false-inv {
+    background-color: tomato;
+    color: tomato;
+}
+.primary-inv,
+.false-inv,
+.true-inv {
+    background-color: #fff;
+}

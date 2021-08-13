@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="{% static 'CSS/general.css' %}"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="{% static 'CSS/blog.css' %}"
+        />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>LeoMalay | {{title}}</title>
+    </head>
+    <body>
+        <header>
+            <div class="left">
+                <p id="header" onclick=""><b>LeoMalay Blogs</b></p>
+                <p id="subDesc">Your one-stop shop!</p>
+            </div>
+            <div class="right">
+                <div class="header-drop-down">
+                    <button class="header-drop-btn">&#9776;</button>
+                    <div class="header-drop-down-content">
+                        <a href="/auth/">Login</a>
+                        <a href="/auth/newAccount">NewAccount</a>
+                        <a href="/shop/">Visit Shop</a>
+                    </div>
+                </div>
+            </div>
+            <br />
+        </header>
+        <div class="content" id="content">
+            {% block content %}{% endblock %}
+        </div>
+        <footer>
+            <div class="left">
+                <p id="header" onclick=""><b>LeoMalay Blogs</b></p>
+                <p id="subDesc">Your one-stop shop!</p>
+            </div>
+            <div class="right">
+                <p class="right" id="desc">
+                    <b>Contact Me:</b><br /><b>Mail:</b>
+                    dev.malay.290@gmail.com<br /><b>HeadOffice:</b>Navsari,
+                    Gujarat, India
+                </p>
+            </div>
+            <br />
+        </footer>
+    </body>
+</html>

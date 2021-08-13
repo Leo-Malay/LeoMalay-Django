@@ -1,0 +1,8 @@
+{% extends 'blog/index.html' %} {% block content %}
+<div class="article">
+    <p id="supHeader"><b>{{data.title}}</b></p>
+    <p id="desc">{{data.author}}</p>
+    {% load static %} <img src="{% static data.image %}" alt="" srcset="" />
+    <p id="desc">{{data.content}}</p>
+</div>
+{% endblock %}

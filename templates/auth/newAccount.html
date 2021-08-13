@@ -1,0 +1,73 @@
+{% extends 'auth/index.html' %} {% block msg %}
+<div class="message" style="text-align: center">
+    {% if type == '0' %}
+    <input type="button" value="{{msg}}" class="false-inv" />
+    {% elif type == '1' %}
+    <input type="button" value="{{msg}}" class="primary-inv" />
+    {% endif %}
+</div>
+{% endblock %} {% block form %}
+<div class="form">
+    <div class="Header">
+        <p id="subHeader">New Account</p>
+    </div>
+    <form action="/auth/newAccount" method="post">
+        {% csrf_token %}
+        <input
+            type="text"
+            name="fname"
+            id="fname"
+            class="input"
+            placeholder="First-Name"
+            autocomplete="given-name"
+        />
+        <input
+            type="text"
+            name="lname"
+            id="lname"
+            class="input"
+            placeholder="Last-Name"
+            autocomplete="family-name"
+        />
+        <select
+            name="country"
+            id="country"
+            class="input"
+            autocomplete="country-name"
+        >
+            <option value="IN">India</option>
+            <option value="USA">United States</option>
+            <option value="UK">United Kingdom</option>
+            <option value="AU">Australia</option>
+            <option value="USSR">Russia</option>
+            <option value="DE">Germany</option></select
+        ><br />
+        <input type="radio" name="gender" id="genderM" value="M" /> Male
+        <input type="radio" name="gender" id="genderF" value="F" /> Female
+        <br />
+        <input
+            type="email"
+            name="email"
+            class="input"
+            id="email"
+            placeholder="E-mail"
+            autocomplete="email"
+        />
+        <br />
+        <input
+            type="password"
+            name="password"
+            class="input"
+            id="password"
+            placeholder="Password"
+            autocomplete="new-password"
+        />
+        <br />
+        <input type="submit" value="Create Account" class="button primary" />
+    </form>
+    <form action="/auth/" method="get">
+        <input type="submit" value="Already have Account" class="button true" />
+    </form>
+    <div class="Footer"></div>
+</div>
+{% endblock %}

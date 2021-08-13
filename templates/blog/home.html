@@ -1,0 +1,10 @@
+{% extends 'blog/index.html' %} {% load static %} <br />
+{% block content %} {% for blogs in blog_list %}
+<div class="card">
+    <div id="detail">
+        <img src="{% static blogs.img %}" />
+        <p id="desc"><b>{{blogs.title}}</b></p>
+        <p id="subDesc">{{blogs.date}}</p>
+    </div>
+</div>
+{% endfor %} {% endblock %}

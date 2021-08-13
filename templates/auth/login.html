@@ -1,0 +1,39 @@
+{% extends 'auth/index.html' %} {% block msg %}
+<div class="message" style="text-align: center">
+    {% if type == '0' %}
+    <input type="button" value="{{msg}}" class="false-inv" />
+    {% elif type == '1' %}
+    <input type="button" value="{{msg}}" class="primary-inv" />
+    {% endif %}
+</div>
+{% endblock %} {% block form %}
+<div class="form">
+    <div class="Header">
+        <p id="subHeader">Login</p>
+    </div>
+    <form action="/auth/" method="post">
+        {% csrf_token %}
+        <input
+            type="email"
+            name="email"
+            class="input"
+            id="email"
+            placeholder="E-mail"
+        />
+        <br />
+        <input
+            type="password"
+            name="password"
+            class="input"
+            id="password"
+            placeholder="Password"
+        />
+        <br />
+        <input type="submit" value="Login" class="button primary" />
+    </form>
+    <form action="/auth/newAccount" method="get">
+        <input type="submit" value="New Here?" class="button true" />
+    </form>
+    <div class="Footer"></div>
+</div>
+{% endblock %}

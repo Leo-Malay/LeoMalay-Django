@@ -1,0 +1,27 @@
+{% extends 'shop/index.html' %} {% block content %} {% load static %}
+<div class="product_con">
+    {% for ele in data %}
+    <div class="product" id="product">
+        <img src="{% static ele.image %}" />
+        <div id="footer">
+            <p id="subTitle"><b>{{ele.name}}</b></p>
+            <p class="price" id="desc">${{ele.price}}</p>
+            <div id="pos_below">
+                <a
+                    href="product?id={{ele.id}}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <input
+                        type="button"
+                        value="Details"
+                        class="input primary"
+                    />
+                </a>
+                <input type="button" value="Add to Cart" class="input true" />
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
